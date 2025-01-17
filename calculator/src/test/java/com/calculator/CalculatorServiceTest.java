@@ -12,6 +12,11 @@ public class CalculatorServiceTest {
         assertEquals(0, calculatorService.add(""));
     }
 	
+	@Test
+    void testAdd_SingleNumber_ShouldReturnNumber() {
+        assertEquals(1, calculatorService.add("1"));
+    }
+	
 	
 
 	
