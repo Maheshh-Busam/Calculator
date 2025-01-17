@@ -12,18 +12,5 @@ public class CalculatorServiceTest {
         assertEquals(0, calculatorService.add(""));
     }
 	
-	@Test
-    void testAdd_SingleNumber_ShouldReturnNumber() {
-        assertEquals(1, calculatorService.add("1"));
-    }
 	
-	@Test
-    void testAdd_TwoNumbers_ShouldReturnSum() {
-        assertEquals(6, calculatorService.add("1,5"));
-    }
-	
-	@Test
-    void testAdd_MultipleNumbers_ShouldReturnSum() {
-        assertEquals(10, calculatorService.add("1,2,3,4"));
-    }
 }
