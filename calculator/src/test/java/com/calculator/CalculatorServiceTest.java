@@ -2,6 +2,7 @@ package com.calculator;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorServiceTest {
 
@@ -37,6 +38,21 @@ public class CalculatorServiceTest {
         assertEquals(6, calculatorService.add("1\n2\n3"));
     }
 	
+    @Test
+    void testAdd_NegativeNumber_ShouldThrowException() {
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            calculatorService.add("1,-2,3");
+        });
+        assertEquals("Negative numbers not allowed: -2", exception.getMessage());
+    }
+
+    @Test
+    void testAdd_MultipleNegativeNumbers_ShouldThrowException() {
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            calculatorService.add("-1,-2,3");
+        });
+        assertEquals("Negative numbers not allowed: -1, -2", exception.getMessage());
+    }
 	
 
 	
