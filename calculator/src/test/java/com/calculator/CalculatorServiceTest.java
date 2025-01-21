@@ -27,6 +27,16 @@ public class CalculatorServiceTest {
         assertEquals(10, calculatorService.add("1,2,3,4"));
     }
 	
+	@Test
+    void testAdd_NewLineSeparator_ShouldReturnSum() {
+        assertEquals(6, calculatorService.add("1\n2,3"));
+    }
+
+    @Test
+    void testAdd_OnlyNewLineSeparators_ShouldReturnSum() {
+        assertEquals(6, calculatorService.add("1\n2\n3"));
+    }
+	
 	
 
 	
