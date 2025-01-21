@@ -54,6 +54,4 @@ public class CalculatorServiceTest {
         assertEquals("Negative numbers not allowed: -1, -2", exception.getMessage());
     }
 	
-
-	
 }
