@@ -24,7 +24,6 @@ public class CalculatorServiceImpl implements CalculatorService {
         }
         
      // If negative numbers exist, throw an exception
-     // If negative numbers exists, throw an exception
         if (!negativeNumbers.isEmpty()) {
             throw new IllegalArgumentException(
                 "Negative numbers not allowed: " + negativeNumbers.toString().replace("[", "").replace("]", "")
